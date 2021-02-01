@@ -136,7 +136,11 @@ Angular CLI
     npm install @angular/cli  -g
     
 
-
+ES6 Modules
+    Anything defined in JS/TS files is considered private to that file
+    Any public entity has to explicitly exported
+    Any entity from other JS/TS file has to be explicitly imported
+    
 
 
 

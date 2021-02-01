@@ -11,11 +11,16 @@ export class AppComponent {
   /* state */
   title = 'first-app';
 
+  onBtnClick(){
+    this.title = 'Expense Management'
+  }
+  /* 
   constructor(){
     setTimeout(() =>{ 
       this.title = 'Expense Management'
     }, 10000);
-  }
+  } 
+  */
 
   //NO UI BEHAVIOR
 
