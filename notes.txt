@@ -107,10 +107,22 @@ var products = [
 ]
 
 1. Display all the stationary products (filter)
+        products.filter(product => product.category === 'stationary')
+
 2. Find the cheapest product cost (reduce)
+        products.reduce((result, product) => result < product.cost ? result : product.cost, Number.MAX_VALUE)
+
 3. Find the overall value of the products (sum of (cost * units)) (reduce)
+        products.reduce((result, product) => result + (product.cost * product.units), 0)
+
 4. Apply a discount of 10% to the products cost and display the updated products (map, forEach)
+    products
+        .map(product => ({...product, cost : product.cost * 0.9}))
+        .forEach(console.log)
+
 5. Sort the products by units and display them (sort)
+    console.table(products.sort((p1, p2) => p1.units - p2.units))
+
 
 
 
