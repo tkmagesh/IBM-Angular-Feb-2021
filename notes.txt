@@ -121,7 +121,21 @@ var products = [
         .forEach(console.log)
 
 5. Sort the products by units and display them (sort)
-    console.table(products.sort((p1, p2) => p1.units - p2.units))
+    console.table(products.sort((p1, p2) => p1.units - p2.units));
+
+Requirements
+1. Visual Studio Code
+2. Chrome Browser
+3. Node.js
+    node --version
+
+Node.js
+    Runtime for JS tools that are used for building angular applications
+
+Angular CLI
+    npm install @angular/cli  -g
+    
+
 
 
 
