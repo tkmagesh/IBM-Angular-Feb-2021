@@ -106,11 +106,11 @@ var products = [
 	{id : 4, name : 'Den', cost : 90, units : 20, category : 'stationary'},
 ]
 
-1. Display all the stationary products
-2. Find the cheapest product cost
-3. Find the overall value of the products (sum of (cost * units))
-4. Apply a discount of 10% to the products cost and display the updated products
-5. Sort the products by units and display them
+1. Display all the stationary products (filter)
+2. Find the cheapest product cost (reduce)
+3. Find the overall value of the products (sum of (cost * units)) (reduce)
+4. Apply a discount of 10% to the products cost and display the updated products (map, forEach)
+5. Sort the products by units and display them (sort)
 
 
 
