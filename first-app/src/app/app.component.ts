@@ -10,7 +10,8 @@ export class AppComponent {
 
   /* state */
   title = 'first-app';
-
+  choice = '';
+  
   onBtnClick(){
     this.title = 'Expense Management'
   }
