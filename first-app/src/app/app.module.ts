@@ -7,6 +7,8 @@ import { GreeterComponent } from './greeter/greeter.component';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { ProductsComponent } from './products/products.component';
 
+import { CalculatorService } from './calculator/calculator.service';
+
 @NgModule({
   /* register the UI entities of the module. ie., Component, Directive & Pipe */
   declarations: [
@@ -21,7 +23,9 @@ import { ProductsComponent } from './products/products.component';
     , FormsModule
   ],
   /* register the non-UI entites. ie., Service */
-  providers: [],
+  providers: [
+    CalculatorService
+  ],
   
   /* top most component in the UI */
   bootstrap: [AppComponent]
