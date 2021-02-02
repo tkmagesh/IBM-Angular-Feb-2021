@@ -17,6 +17,16 @@ Angular
         - Component
         - Directives
             Low level DOM Manipulation
+            Types of Directives
+                - attribute directive
+                    used by enclosing the directive within [] (ex., ngClass)
+                    Manipulate the attributes of an existing dom node
+                    DO NOT change the structure of the dom tree (by neither adding nor removing dom nodes)
+                - structural directive
+                    used by prefixing the directive name with '*'
+                    CHANGES the structure of the dom tree (by adding new dom nodes or removing existing dom nodes)
+                
+
         - Pipe
             Data transformation for presentation
         - Services

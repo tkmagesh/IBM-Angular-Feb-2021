@@ -1,0 +1,11 @@
+<h3>Products</h3>
+<hr>
+<div>{{productNames.length}}</div>
+<!-- 
+    <label for="">Product Name :</label>
+    <input type="text" name="" id="">
+    <input type="button" value="Add Product"> 
+-->
+<ul>
+    <li *ngFor="let productName of productNames">{{productName}}</li>
+</ul>
