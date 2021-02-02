@@ -2,7 +2,7 @@
 <hr>
 <label for="">User Name :</label>
 <input type="text" [(ngModel)]="userName" >
-<input type="button" value="Greet">
+<input type="button" value="Greet" (click)="onBtnGreetClick()">
 <!-- when the greet button is clicked display 
     'Hi <userName>, Have a nice day!' -->
-<div class="highlight">{{userName}}</div>
+<div class="highlight">{{message}}</div>
