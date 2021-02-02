@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Bug } from './models/Bug';
 
 @Component({
   selector: 'app-bug-tracker',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BugTrackerComponent implements OnInit {
 
-  bugs : string[] = [];
-  newBug : string = '';
+  bugs : Bug[] = [];
 
+  newBugName : string = '';
+
+  private currentBugId : number = 0;
 
   constructor() { }
 
@@ -17,10 +20,17 @@ export class BugTrackerComponent implements OnInit {
   }
 
   onAddNewClick(){
-    this.bugs.push(this.newBug);
+    const newBug : Bug = {
+      id : ++this.currentBugId,
+      name : this.newBugName,
+      isClosed : false,
+      createdAt : new Date()
+    };
+
+    this.bugs.push(newBug);
   }
 
-  onRemoveClick(bugToRemove : string){
+  onRemoveClick(bugToRemove : Bug){
     this.bugs = this.bugs.filter(bug => bug !== bugToRemove);
   }
 }

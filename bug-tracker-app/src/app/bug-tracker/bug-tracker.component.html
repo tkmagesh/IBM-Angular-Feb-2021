@@ -14,13 +14,13 @@
 </section>
 <section class="edit">
     <label for="">Bug Name :</label>
-    <input type="text" [(ngModel)]="newBug">
+    <input type="text" [(ngModel)]="newBugName">
     <input type="button" value="Add New" (click)="onAddNewClick()">
 </section>
 <section class="list">
     <ol>
         <li *ngFor="let bug of bugs">
-            <span class="bugname">{{bug}}</span>
+            <span class="bugname">{{bug | json}}</span>
             <div class="datetime">[createdAt]</div>
             <input type="button" value="Remove" (click)="onRemoveClick(bug)">
         </li>
