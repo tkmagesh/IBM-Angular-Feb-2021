@@ -7,12 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  productNames : string[] = [
-    'Pen',
-    'Pencil',
-    'Marker',
-    'Scribble Pad'
-  ];
+  productNames : string[] = [ 'Pen' ];
 
   constructor() { }
 
