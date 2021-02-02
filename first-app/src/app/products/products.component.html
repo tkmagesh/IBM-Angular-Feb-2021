@@ -16,6 +16,8 @@
 </div>
 
 <!-- display the following list only when there are products -->
-<ul #productList>
-    <li *ngFor="let productName of productNames">{{productName}}</li>
-</ul>
+<ng-template #productsList>
+    <ul>
+        <li *ngFor="let productName of productNames">{{productName}}</li>
+    </ul>
+</ng-template>
