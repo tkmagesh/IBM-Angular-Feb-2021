@@ -7,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
-  productNames : string[] = [ 'Pen' ];
+  newProductName : string = '';
+  productNames : string[] = [  ];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onAddProductClick(){
+    this.productNames.push(this.newProductName)
+  }
 }

@@ -4,11 +4,11 @@
 <div *ngIf="productNames.length > 0">
     {{productNames.length}}
 </div>
-<!-- 
-    <label for="">Product Name :</label>
-    <input type="text" name="" id="">
-    <input type="button" value="Add Product"> 
--->
+
+<label for="">Product Name :</label>
+<input type="text" [(ngModel)]="newProductName">
+<input type="button" value="Add Product" (click)="onAddProductClick()"> 
+
 <!-- display the following div only when there are no products -->
 <div>
     No products to display!
