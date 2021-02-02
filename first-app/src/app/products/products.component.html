@@ -2,7 +2,8 @@
 <hr>
 
 <div *ngIf="productNames.length > 0">
-    {{productNames.length}}
+    <span>Count : </span>
+    <span> {{productNames.length}} </span>
 </div>
 
 <label for="">Product Name :</label>
@@ -10,11 +11,11 @@
 <input type="button" value="Add Product" (click)="onAddProductClick()"> 
 
 <!-- display the following div only when there are no products -->
-<div>
+<div *ngIf="productNames.length === 0; else productsList">
     No products to display!
 </div>
 
 <!-- display the following list only when there are products -->
-<ul>
+<ul #productList>
     <li *ngFor="let productName of productNames">{{productName}}</li>
 </ul>
