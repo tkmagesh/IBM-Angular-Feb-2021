@@ -8,5 +8,5 @@
 <input type="button" value="Multiply" (click)="onMultiplyClick()">
 <input type="button" value="Divide" (click)="onDivideClick()">
 <div [ngClass]="{positive : result >= 0, negative : result < 0}">
-    {{result}}
+    {{result | currency:'INR'}}
 </div>

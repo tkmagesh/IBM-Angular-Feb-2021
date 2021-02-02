@@ -18,6 +18,9 @@
 <!-- display the following list only when there are products -->
 <ng-template #productsList>
     <ul>
-        <li *ngFor="let productName of productNames">{{productName}}</li>
+        <li *ngFor="let productName of productNames">
+            <span style="margin-right : 10px">{{productName}}</span>
+            <span> <input type="button" value="Remove" (click)="onRemoveClick(productName)"> </span>
+        </li>
     </ul>
 </ng-template>
