@@ -6,10 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BugTrackerComponent } from './bug-tracker/bug-tracker.component';
 
+import { TrimTextPipe } from './bug-tracker/pipes/trimText.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
-    BugTrackerComponent
+    BugTrackerComponent,
+    TrimTextPipe
   ],
   imports: [
     BrowserModule,
