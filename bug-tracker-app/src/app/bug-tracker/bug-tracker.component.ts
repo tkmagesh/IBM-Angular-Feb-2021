@@ -44,7 +44,7 @@ export class BugTrackerComponent implements OnInit {
   onRemoveClosedClick(){
     this.bugs
       .filter(bug => bug.isClosed)
-      .forEach(this.onRemoveClick)
+      .forEach(closedBug => this.onRemoveClick(closedBug))
   }
-  
+
 }
