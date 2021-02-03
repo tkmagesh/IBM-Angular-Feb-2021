@@ -1,14 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Bug } from '../models/Bug';
 
 interface Comparer{
     (p1 : any , p2 : any) : number
 }
 
-
-
 @Pipe({
-    name : 'sort'
+    name : 'sort',
+    pure : true
 })
 export class SortPipe implements PipeTransform{
 
@@ -27,8 +25,9 @@ export class SortPipe implements PipeTransform{
         if (isDesc) return this.getDescComparerFor(comparer);
         return comparer;
     }
-    
+
     transform(value: any[], attr : string = '', isDesc : boolean = false) : any[] {
+        console.log('sort.transform triggered with', value, attr, isDesc);
         if (!value || !value.length || !attr) return value;
         const comparer = this.getComparerFor(attr, isDesc);
         return value.sort(comparer);

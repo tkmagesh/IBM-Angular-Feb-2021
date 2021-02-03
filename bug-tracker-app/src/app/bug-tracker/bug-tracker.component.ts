@@ -29,11 +29,13 @@ export class BugTrackerComponent implements OnInit {
 
   onAddNewClick(){
     const newBug = this.bugOperations.createNew(this.newBugName);
-    this.bugs.push(newBug);
+    //this.bugs.push(newBug);
+    this.bugs = [...this.bugs, newBug];
   }
 
   onBugNameClick(bugToToggle : Bug){
-    this.bugOperations.toggle(bugToToggle);
+    const toggledBug = this.bugOperations.toggle(bugToToggle);
+    this.bugs = this.bugs.map(bug => bug === bugToToggle ? toggledBug : bug);
   }
 
   onRemoveClick(bugToRemove : Bug){
