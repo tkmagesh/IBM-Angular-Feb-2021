@@ -5,7 +5,7 @@ import { BugOperationsService } from './services/bugOperations.service';
 @Component({
   selector: 'app-bug-tracker',
   templateUrl: './bug-tracker.component.html',
-  styleUrls: ['./bug-tracker.component.css']
+  styleUrls: ['./bug-tracker.component.css', ]
 })
 export class BugTrackerComponent implements OnInit {
 
@@ -20,6 +20,10 @@ export class BugTrackerComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.bugs.push({ id : 3, name : 'Server communication failure', isClosed : true, createdAt : new Date('01-Jan-2021')})
+    this.bugs.push({ id : 2, name : 'Data Integrity checks failed', isClosed : false, createdAt : new Date('01-Feb-2021')})
+    this.bugs.push({ id : 4, name : 'Application not responding', isClosed : false, createdAt : new Date('01-Jan-2020')})
+    this.bugs.push({ id : 1, name : 'User unable to login', isClosed : true, createdAt : new Date('01-Mar-2020')})
   }
 
   onAddNewClick(){
