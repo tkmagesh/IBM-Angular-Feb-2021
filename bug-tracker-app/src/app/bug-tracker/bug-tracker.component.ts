@@ -14,7 +14,7 @@ export class BugTrackerComponent implements OnInit {
   newBugName : string = '';
 
   sortAttr : string = '';
-  
+  sortDesc : boolean = false;
 
   constructor(private bugOperations : BugOperationsService) {
 

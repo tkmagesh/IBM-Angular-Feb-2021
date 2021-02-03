@@ -13,7 +13,7 @@
         <option value="createdAt">Created</option>
     </select>
     <label for="">Descending ? :</label>
-    <input type="checkbox" name="" id="">
+    <input type="checkbox" [(ngModel)]="sortDesc">
 </section>
 <section class="edit">
     <label for="">Bug Name :</label>
@@ -22,7 +22,7 @@
 </section>
 <section class="list">
     <ol>
-        <li *ngFor="let bug of ( bugs | sort:sortAttr ) ">
+        <li *ngFor="let bug of ( bugs | sort:sortAttr:sortDesc ) ">
             <span 
                 class="bugname" 
                 (click)="onBugNameClick(bug)"
@@ -30,14 +30,10 @@
             >
                 {{bug.name | trimText:40}}
             </span>
+            <small> - [{{bug.id}}]</small>
             <div class="datetime">{{bug.createdAt | date}}</div>
             <input type="button" value="Remove" (click)="onRemoveClick(bug)">
         </li>
-        <!-- <li>
-            <span class="bugname closed">[This is bug - 2]</span>
-            <div class="datetime">[createdAt]</div>
-            <input type="button" value="Remove">
-        </li> -->
     </ol>
     <input type="button" value="Remove Closed" (click)="onRemoveClosedClick()">
 </section>
