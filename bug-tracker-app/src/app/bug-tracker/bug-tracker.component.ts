@@ -47,6 +47,7 @@ export class BugTrackerComponent implements OnInit {
   }
 
   getClosedCount() : number {
+    console.log('getClosedCount triggered');
     return this.bugs.reduce((result, bug) => bug.isClosed ? result + 1 : result, 0);
   }
 }
