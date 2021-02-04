@@ -47,6 +47,8 @@
         return p;
     }
 
+    
+    /* 
     function addAsyncPromiseClient(x,y){
         console.log(`[@client] triggering the service`);
         var p = addAsyncPromise(x,y);
@@ -54,6 +56,13 @@
         p.then(function(result){
             console.log(`[@client] result = ${result}`);
         });
+    } 
+    */
+
+    async function addAsyncPromiseClient(x,y){
+        console.log(`[@client] triggering the service`);
+        const result = await addAsyncPromise(x,y);
+        console.log(`[@client] result = ${result}`);
     }
 
     window['addAsyncPromiseClient'] = addAsyncPromiseClient;
