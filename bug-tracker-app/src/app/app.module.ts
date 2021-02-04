@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BugTrackerComponent } from './bug-tracker/bug-tracker.component';
+import { BugStatsComponent } from './bug-tracker/components/bug-stats/bug-stats.component';
 
 import { ClosedCountPipe } from './bug-tracker/pipes/closedCount.pipe';
 import { TrimTextPipe } from './bug-tracker/pipes/trimText.pipe';
@@ -14,6 +15,7 @@ import { SortPipe } from './bug-tracker/pipes/sort.pipe';
   declarations: [
     AppComponent,
     BugTrackerComponent,
+    BugStatsComponent,
     ClosedCountPipe,
     TrimTextPipe,
     SortPipe

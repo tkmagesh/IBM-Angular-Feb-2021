@@ -152,7 +152,9 @@ ES6 Modules
     Any entity from other JS/TS file has to be explicitly imported
     
 
-
+Pure Function
+    The invocation of the function can be replaced with the result of the function.
+    
 
 
 
