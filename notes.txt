@@ -155,8 +155,51 @@ ES6 Modules
 Pure Function
     The invocation of the function can be replaced with the result of the function.
     
+Observables
+    Observables = Inverse of Enumerables
+        Enumberables = Iterables with lazy evluation
+        Iterable
 
 
+var nos = [3,1,4,2,5]
+for(let index = 0, count nos.length; index < count; index++){
+    console.log(nos[index]);
+}
+
+PG
+Min 5 yrs exp
+Bangalore
+
+recruit 30 engineers
+
+3000 resumes
+
+1 for 10
+
+filter 300 resumes out of the 3000 received
+
+Enumerable = collection that already has the data
+Observable = collection that WILL GET THE DATA in future
+
+Keyboard, mouse (Series)
+Timer (Series)
+Ajax (Singular)
+Server Sent Events (Series)
+Web Sockets (Series)
+
+Array
+    filter
+    map
+    reduce
+    forEach
+
+Operators
+    observable -> filter -> observable
+
+Rx.NET (Reactive Extension)
+Rxjs
+
+HttpClient (HttpClientModule - @angular/common/http)
 
 
         

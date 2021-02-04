@@ -24,9 +24,20 @@ export class BugEditComponent{
 
     }
 
-    onAddNewClick(){
+    //using the bugStorage service (synchronous)
+    /* onAddNewClick(){
         const newBug = this.bugOperations.createNew(this.newBugName);
         this.created.emit(newBug);
+    } */
+
+    //using the bugApi service (asynchronous)
+    onAddNewClick(){
+        this.bugOperations
+            .createNew(this.newBugName)
+            .subscribe(newBug => {
+                this.created.emit(newBug);
+            });
+        
     }
 
 }

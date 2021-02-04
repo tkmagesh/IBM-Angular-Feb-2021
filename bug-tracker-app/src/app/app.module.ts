@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { UtilsModule } from './utils/utils.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,7 +24,8 @@ import { ClosedCountPipe } from './bug-tracker/pipes/closedCount.pipe';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    UtilsModule
+    UtilsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

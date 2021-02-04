@@ -16,7 +16,50 @@ export class BugTrackerComponent implements OnInit {
   sortAttr : string = '';
   sortDesc : boolean = false;
 
+  //using the bugApi service (asynchronous)
+
   constructor(private bugOperations : BugOperationsService) {
+    
+  }
+
+  ngOnInit(): void {
+    this.bugOperations
+      .getAll()
+      .subscribe(bugs => this.bugs = bugs);
+  }
+
+  onNewBugCreated(newBug : Bug){
+    this.bugs = [...this.bugs, newBug];
+  }
+
+  onBugNameClick(bugToToggle : Bug){
+    this.bugOperations
+      .toggle(bugToToggle)
+      .subscribe(toggledBug => {
+        this.bugs = this.bugs.map(bug => bug === bugToToggle ? toggledBug : bug);
+      })
+    
+  }
+
+  onRemoveClick(bugToRemove : Bug){
+    this.bugOperations
+      .remove(bugToRemove)
+      .subscribe(() => {
+        this.bugs = this.bugs.filter(bug => bug !== bugToRemove);
+      })
+    
+  }
+
+  onRemoveClosedClick(){
+    this.bugs
+      .filter(bug => bug.isClosed)
+      .forEach(closedBug => this.onRemoveClick(closedBug))
+  }
+
+  ////////////////////////////////////////////////////////////////
+
+  //using the bugStorage service (synchronous)
+  /* constructor(private bugOperations : BugOperationsService) {
     
   }
 
@@ -42,6 +85,6 @@ export class BugTrackerComponent implements OnInit {
     this.bugs
       .filter(bug => bug.isClosed)
       .forEach(closedBug => this.onRemoveClick(closedBug))
-  }
+  } */
 
 }
