@@ -1,3 +1,18 @@
 section{
     margin-bottom: 10px;
 }
+
+.errorMessage{
+    color : red;
+}
+
+.errorInput{
+    border-color : red;
+}
+
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
