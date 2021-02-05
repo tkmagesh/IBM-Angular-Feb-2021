@@ -201,5 +201,8 @@ Rxjs
 
 HttpClient (HttpClientModule - @angular/common/http)
 
-
+Create a projects-tracker
+    Load the projects
+    List the projects
+    Add new projects
         
