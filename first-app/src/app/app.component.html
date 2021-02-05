@@ -1,14 +1,10 @@
 <h1>My App</h1>
 <hr>
+<!-- <app-greeter></app-greeter> -->
 <input type="button" value="Products" (click)="choice='products' ">
 <input type="button" value="Greeter" (click)="choice='greeter'">
 <input type="button" value="Calculator" (click)="choice='calculator'">
 
-<!-- 
-    <app-products *ngIf="choice==='products'"></app-products>
-    <app-greeter *ngIf="choice==='greeter'"></app-greeter>
-    <app-calculator *ngIf="choice==='calculator'"></app-calculator> 
--->
 <div [ngSwitch]="choice">
     <app-products *ngSwitchCase="'products'"></app-products>
     <app-greeter *ngSwitchCase="'greeter'"></app-greeter>

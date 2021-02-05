@@ -206,3 +206,75 @@ Create a projects-tracker
     List the projects
     Add new projects
         
+
+
+http://www.amazon.in
+http://www.amazon.in/electronics
+http://www.amazon.in/electronics/mobile-phones
+http://www.amazon.in/electronics/mobile-phones/google
+http://www.amazon.in/electronics/mobile-phones/google/pixel-2
+
+http://www.amazon.in/electronics/mobile-phones/google/pixel-2/reviews
+
+
+LotusNotes
+LotusNotes/Inbox
+LotusNotes/Inbox/Projects
+LotusNotes/Inbox/Projects/Payroll-Master
+LotusNotes/Inbox/Projects/Payroll-Master/bugs
+
+LotusNotes/Inbox/Projects/Payroll-Master/bugs/bug-101
+
+Angular 2 - Angular Router 3
+Angular 4 - Angular Router 4
+
+Routes
+    'urlPattern' : component
+
+    '/bugs' : BugTrackerComponent
+    '/new' : BugEditComponent
+    '/details/:id' : BugDetailsComponent
+
+    /details/1
+    /details/2
+    /details/3
+
+    RouteGaurd
+        CanActivate
+
+Forms
+    Template Driven Forms
+    Reactive Forms
+
+
+State
+    1. visited (touched, untouched)
+    2. change (dirty, pristine)
+    3. valid (invalid, valid)
+
+Visual Feedback
+
+
+Code coverage
+    ng test --code-coverage
+
+
+Cypress
+    npm install cypress --save-dev
+
+    Modify the package.json file to include the following commands:
+    "cypress:open" : "cypress open"
+    "cypress:run" : "cypress run"
+
+    run the command
+        npm run cypress:open
+
+    Delete the "examples" folder in the "cypress/integration" folder
+
+    write the tests
+
+    in one terminal window run the following command
+        npm run start
+
+    in another terminal window run the following command
+        npm run cypress:open
